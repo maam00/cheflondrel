@@ -483,14 +483,15 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
    TESTIMONIALS
    ============================================== */
 .test-s{background:var(--cream-alt)}
-.test-carousel{position:relative;text-align:center;padding:clamp(1rem,3vw,2rem) 0 clamp(2rem,4vw,3rem);min-height:320px}
+.test-carousel{position:relative;text-align:center;padding:clamp(1rem,3vw,2rem) 0 clamp(2rem,4vw,3rem)}
 .test-qm{font-family:'Playfair Display',serif;font-size:clamp(5rem,10vw,8rem);color:var(--accent);opacity:.1;line-height:.6;display:block;margin-bottom:.5rem;user-select:none}
-.test-slide{position:absolute;left:50%;top:4.5rem;transform:translateX(-50%);width:90%;max-width:700px;opacity:0;transition:opacity .8s,transform .8s;pointer-events:none;transform:translateX(-50%) translateY(10px)}
-.test-slide.active{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0)}
-.test-slide blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.2vw,1.55rem);font-style:italic;font-weight:400;line-height:1.65;color:var(--text);margin-bottom:1.25rem}
+.test-slides-wrap{position:relative;width:90%;max-width:700px;margin:0 auto}
+.test-slide{opacity:0;transition:opacity .8s,transform .8s;pointer-events:none;transform:translateY(10px);position:absolute;top:0;left:0;width:100%}
+.test-slide.active{opacity:1;pointer-events:all;transform:translateY(0);position:relative}
+.test-slide blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,2.2vw,1.55rem);font-style:italic;font-weight:400;line-height:1.65;color:var(--text);margin-bottom:1.25rem}
 .test-slide .ta{font-family:'Caveat',cursive;font-size:1.15rem;font-weight:600}
 .test-slide .tl{font-size:.78rem;color:var(--text-m);margin-top:.15rem}
-.test-dots{display:flex;justify-content:center;gap:.5rem;margin-top:clamp(12rem,22vw,16rem)}
+.test-dots{display:flex;justify-content:center;gap:.5rem;margin-top:2rem}
 .test-dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--text-m);background:none;padding:0;transition:all .3s}
 .test-dot.active{background:var(--accent);border-color:var(--accent);transform:scale(1.15)}
 .test-photos{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:2rem}
@@ -498,7 +499,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 .test-photos .ir img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 
 @media(max-width:768px){
-  .test-dots{margin-top:clamp(14rem,40vw,18rem)}
   .test-photos{grid-template-columns:1fr}
 }
 
@@ -782,35 +782,37 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
     <div class="test-carousel fu">
       <span class="test-qm">&ldquo;</span>
 
-      <div class="test-slide active" data-i="0">
-        <blockquote>Chef Lonny turned a basic backyard party into an event that after a month our guests are still raving about. The food was delicious and creative and Chef Lonny's enthusiasm is infectious and entertaining. We can't wait to hire him again.</blockquote>
-        <div class="ta">Laurie S.</div>
-        <div class="tl">White Plains, NY</div>
-      </div>
-      <div class="test-slide" data-i="1">
-        <blockquote>Perfectly crisp chewy sourdough crust, classic and tailored toppings that were both familiar and surprising, and a warm energy that permeated through his work. This was really a fun way to host a party. Everyone was happy!</blockquote>
-        <div class="ta">Katie S.</div>
-        <div class="tl">Greenwich, CT</div>
-      </div>
-      <div class="test-slide" data-i="2">
-        <blockquote>If you want to throw a pizza party that people will talk about for years, you've got to check out Lonny. His pizza is a serious game-changer, taking on the big-name pizza joints and coming out on top.</blockquote>
-        <div class="ta">Paul &amp; Sydnie G.</div>
-        <div class="tl">Melville, NY</div>
-      </div>
-      <div class="test-slide" data-i="3">
-        <blockquote>Living in the city known for its pizza, Lonny's pizza is still one of my favorites. He uses fresh, local ingredients and puts them together artfully to make some perfect bites. Highly recommend for your next event.</blockquote>
-        <div class="ta">Tara P.</div>
-        <div class="tl">Brooklyn, NY</div>
-      </div>
-      <div class="test-slide" data-i="4">
-        <blockquote>His pizza is the best!! Coming from a New Yorker, that is quite the compliment. I have hired Lonny for numerous parties and his food, personality and love of the finest ingredients is what makes him our favorite personal chef.</blockquote>
-        <div class="ta">Charna W.</div>
-        <div class="tl">Scotch Plains, NJ</div>
-      </div>
-      <div class="test-slide" data-i="5">
-        <blockquote>Each pie that comes out of the oven is a masterpiece. It's not just about the pizza — having Lonny over means the whole vibe of the evening is set. The atmosphere turns electric when he's around, and if a guitar is within reach, get ready for an impromptu concert.</blockquote>
-        <div class="ta">Paul &amp; Sydnie G.</div>
-        <div class="tl">Fire Island, NY</div>
+      <div class="test-slides-wrap">
+        <div class="test-slide active" data-i="0">
+          <blockquote>Chef Lonny turned a basic backyard party into an event that after a month our guests are still raving about. The food was delicious and creative and Chef Lonny's enthusiasm is infectious and entertaining. We can't wait to hire him again.</blockquote>
+          <div class="ta">Laurie S.</div>
+          <div class="tl">White Plains, NY</div>
+        </div>
+        <div class="test-slide" data-i="1">
+          <blockquote>Perfectly crisp chewy sourdough crust, classic and tailored toppings that were both familiar and surprising, and a warm energy that permeated through his work. This was really a fun way to host a party. Everyone was happy!</blockquote>
+          <div class="ta">Katie S.</div>
+          <div class="tl">Greenwich, CT</div>
+        </div>
+        <div class="test-slide" data-i="2">
+          <blockquote>If you want to throw a pizza party that people will talk about for years, you've got to check out Lonny. His pizza is a serious game-changer, taking on the big-name pizza joints and coming out on top.</blockquote>
+          <div class="ta">Paul &amp; Sydnie G.</div>
+          <div class="tl">Melville, NY</div>
+        </div>
+        <div class="test-slide" data-i="3">
+          <blockquote>Living in the city known for its pizza, Lonny's pizza is still one of my favorites. He uses fresh, local ingredients and puts them together artfully to make some perfect bites. Highly recommend for your next event.</blockquote>
+          <div class="ta">Tara P.</div>
+          <div class="tl">Brooklyn, NY</div>
+        </div>
+        <div class="test-slide" data-i="4">
+          <blockquote>His pizza is the best!! Coming from a New Yorker, that is quite the compliment. I have hired Lonny for numerous parties and his food, personality and love of the finest ingredients is what makes him our favorite personal chef.</blockquote>
+          <div class="ta">Charna W.</div>
+          <div class="tl">Scotch Plains, NJ</div>
+        </div>
+        <div class="test-slide" data-i="5">
+          <blockquote>Each pie that comes out of the oven is a masterpiece. It's not just about the pizza — having Lonny over means the whole vibe of the evening is set. The atmosphere turns electric when he's around, and if a guitar is within reach, get ready for an impromptu concert.</blockquote>
+          <div class="ta">Paul &amp; Sydnie G.</div>
+          <div class="tl">Fire Island, NY</div>
+        </div>
       </div>
 
       <div class="test-dots" id="testDots"></div>
