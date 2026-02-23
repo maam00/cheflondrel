@@ -225,34 +225,58 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How much does a private pizza party with ChefLondrel cost?",
+        "name": "Does ChefLondrel make his own dough?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ChefLondrel offers three packages: The Classic at $90/person (omakase pizza spread), The Spread at $110/person (adds chicken or eggplant parm + Caesar salad), and The Full Send at $135/person (the complete experience with pasta, Caesar, parm, and dessert). All packages are all-inclusive with a minimum of 8 guests. Add-ons include an appetizer spread (+$15/person), a post-dinner guitar singalong (+$150 flat), and a 25% holiday surcharge for Memorial Day, July 4th, and Labor Day weekends."
+          "text": "Of course! The dough is the most important ingredient of the pizza experience. Just like all good sandwiches start with good bread, all good pizza starts with good dough. It took years to develop and now Chef Londrel shares it with every guest."
         }
       },
       {
         "@type": "Question",
-        "name": "What areas does ChefLondrel serve?",
+        "name": "Where did Chef Londrel learn to make pizza?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ChefLondrel is now booking summer 2026 in the Berkshires, Massachusetts. A $50 flat travel surcharge applies for locations 45+ minutes away. For events outside the Berkshires, reach out directly to discuss."
+          "text": "Living in Brooklyn for 6 years — from Pizza School NYC to gourmet pizzerias around the city. Plus studies from the greatest pizzaioli (Tony Gemignani, Dan Richer, Anthony Falco) and training in Campania, Tokyo, and Oaxaca."
         }
       },
       {
         "@type": "Question",
-        "name": "Does ChefLondrel accommodate dietary restrictions?",
+        "name": "How far will ChefLondrel travel for an event?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! Chef Londrel accommodates all dietary needs including gluten-free and vegan options. After booking, he'll reach out to discuss your menu, headcount, and any dietary requirements."
+          "text": "As far as you're willing to send him. Chef Londrel was flown to Hawaii for a pizza party in 2024. A $50 flat travel surcharge applies for locations 45+ minutes away."
         }
       },
       {
         "@type": "Question",
-        "name": "What is included in a ChefLondrel pizza party?",
+        "name": "Is there a minimum guest count for ChefLondrel?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "All pricing is all-inclusive — ingredients, prep, cooking, and cleanup. Chef Londrel brings fresh dough, handmade sauce, gourmet toppings, and works with your home oven, outdoor grill, or his own portable Ooni pizza oven. You just provide the kitchen or backyard."
+          "text": "Yes, 8 guests minimum for all packages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a holiday surcharge for ChefLondrel events?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, due to high demand for holiday weekends (Memorial Day, July 4th, Labor Day), a 25% surcharge of your party total will be added."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ChefLondrel require a deposit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, a $200 non-refundable deposit via Venmo or Zelle once the party is confirmed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I need to provide for a ChefLondrel pizza party?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Just a working oven (if indoors), ample counter space, a clear sink, a roll of paper towels, and a big appetite. Chef Londrel has the rest covered."
         }
       }
     ]
@@ -589,7 +613,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 .faq-q svg{flex-shrink:0;opacity:.4;transition:transform .3s,opacity .3s}
 .faq-item.open .faq-q svg{transform:rotate(180deg);opacity:.7}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease}
-.faq-item.open .faq-a{max-height:300px}
+.faq-item.open .faq-a{max-height:500px}
 .faq-a p{font-size:.92rem;color:var(--text-dm);line-height:1.85;padding:0 0 1.25rem}
 
 /* ==============================================
@@ -979,47 +1003,87 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
   <div class="section-inner" style="max-width:760px">
     <div style="text-align:center;margin-bottom:clamp(2rem,4vw,3rem)">
       <span class="section-label fu">FAQ</span>
-      <h2 class="fu fd1" style="font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-.02em">Common Questions</h2>
+      <h2 class="fu fd1" style="font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-.02em">Chef Londrel FAQ</h2>
     </div>
 
     <div class="faq-list">
-      <div class="faq-item fu fd1">
+      <div class="faq-item fu">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>How much does a private pizza party cost?</span>
+          <span>Do you make your own dough?</span>
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-a">
-          <p>Three packages: The Classic at $90/person (omakase pizza spread), The Spread at $110/person (adds chicken or eggplant parm + Caesar salad), and The Full Send at $135/person (the complete experience with pasta, Caesar, parm, and dessert). All packages are all-inclusive with a minimum of 8 guests. Add-ons include an appetizer spread (+$15/person), a post-dinner guitar singalong (+$150 flat), and a 25% holiday surcharge for Memorial Day, July 4th, and Labor Day weekends.</p>
+          <p>Of course I do. What a fraud I'd be if I didn't! The dough is the most important ingredient of the pizza experience. Just like all good sandwiches start with good bread, all good pizza starts with good dough. And all AMAZING pizza starts with amazing dough. It took me years to develop it to a point where I'm happy with it and now I get to share it with all of YOU.</p>
         </div>
       </div>
 
-      <div class="faq-item fu fd2">
+      <div class="faq-item fu">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>What areas do you serve?</span>
+          <span>Where did you learn how to make pizza?</span>
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-a">
-          <p>Now booking summer 2026 in the Berkshires, NYC, and beyond. A $50 flat travel surcharge applies for locations 45+ minutes away. For events outside the area, reach out directly to discuss.</p>
+          <p>Living in Brooklyn for 6 years taught me how to make pizza. From my early days working at Pizza School NYC, where I was exposed to the fundamentals of pizza making (dough, sauce, cheese), to working and learning in gourmet pizzerias around the city which never held back in using high-quality ingredients with high-quality techniques. Plus, I've always been very scholastic in my craft. Consuming books by some of the greatest pizzaioli (Tony Gemignani, Dan Richer, Anthony Falco, etc) helped shape my craft into what it's become today.</p>
         </div>
       </div>
 
-      <div class="faq-item fu fd3">
+      <div class="faq-item fu">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>Do you accommodate dietary restrictions?</span>
+          <span>How far are you willing to travel for an event?</span>
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-a">
-          <p>Yes! Chef Londrel accommodates all dietary needs including gluten-free and vegan options. After booking, he'll reach out to discuss your menu, headcount, and any dietary requirements.</p>
+          <p>As far as you're willing to send me. I was flown to the Big Island of Hawaii in February 2024 to do a pizza party. I brought my essential tools and relied on Hawaiian ingredients and whatever was available to me in local markets. Luckily, the client had an Ooni Pizza Oven that made the pizza cooking easy but being flexible and open to what was available was crucial to the success of the party. Mahalo!!</p>
         </div>
       </div>
 
-      <div class="faq-item fu fd4">
+      <div class="faq-item fu">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>What's included in the price?</span>
+          <span>Is there a minimum guest count?</span>
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-a">
-          <p>All pricing is all-inclusive — ingredients, prep, cooking, and cleanup. Chef Londrel brings fresh dough, handmade sauce, gourmet toppings, and works with your home oven, outdoor grill, or his own portable Ooni pizza oven. You just provide the kitchen or backyard.</p>
+          <p>Yes, 8 guests.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fu">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Is there a holiday or peak-season surcharge?</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Yes there is! Due to high demand for holiday weekends, a 25% surcharge of your party total will be added.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fu">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Are gratuities included/expected?</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Since I am the sole operator of this venture, I do not expect or require gratuities. However, if you feel as if I did an above-and-beyond job, I absolutely accept a little cherry on top of a job well done. Most clients have tipped in the past.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fu">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you require a deposit?</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Yes &mdash; a $200 deposit can be made via Venmo or Zelle once the party is confirmed. This is a non-refundable deposit.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fu">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What do you need from me?</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Just a working oven (if we're doing the party indoors), ample counter space, a clear sink, a roll of paper towels, and a big appetite! I have the rest covered!</p>
         </div>
       </div>
     </div>
