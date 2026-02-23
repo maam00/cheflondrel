@@ -378,8 +378,10 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 .float-cta:hover{background:var(--accent-h)}
 
 @media(max-width:600px){
-  .hero{min-height:auto;min-height:auto;padding-top:clamp(5rem,14vh,7rem);padding-bottom:clamp(3rem,6vh,5rem)}
-  .hero-img-accent{display:none}
+  .hero{min-height:auto;padding-top:clamp(5rem,14vh,7rem);padding-bottom:clamp(2.5rem,5vh,4rem)}
+  .hero-img-accent{position:relative;right:auto;top:auto;width:100%;aspect-ratio:16/9;border-radius:8px;margin-bottom:1.5rem;z-index:2}
+  .hero.animated .hero-img-accent{opacity:.85}
+  .hero-img-accent img{animation:none}
   .hero-bottom{flex-direction:column;align-items:flex-start}
   .hero-right{margin-top:.25rem}
   .hero-badge{white-space:normal;font-size:1rem;line-height:1.4}
@@ -429,6 +431,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 
 @media(max-width:900px){
   .exp-grid{grid-template-columns:1fr}
+  .exp-images{order:-1}
   .exp-callouts{grid-template-columns:1fr}
 }
 
