@@ -318,18 +318,22 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 .nav-cta:hover{background:#fff !important;color:var(--dark) !important;border-color:#fff !important}
 .nav-cta::after{display:none !important}
 
-.hamburger{display:none;flex-direction:column;gap:6px;cursor:pointer;z-index:1002;padding:8px;position:relative}
+.hamburger{display:none;flex-direction:column;gap:6px;cursor:pointer;padding:8px}
 .hamburger span{width:22px;height:1.5px;background:#fff;transition:all .3s;transform-origin:center}
 .hamburger.active span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
 
+/* Mobile overlay — lives outside nav, no stacking context issues */
+.mob-overlay{display:none}
+
 @media(max-width:768px){
-  .hamburger{display:flex}
-  .nav-links{position:fixed;inset:0;z-index:1000;background:var(--dark);flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .4s}
-  .nav-links.open{opacity:1;pointer-events:all}
-  .nav-links a{font-size:1.1rem;color:rgba(255,255,255,.7)}
-  .nav-links li{list-style:none}
+  .hamburger{display:flex;position:relative;z-index:1002}
+  .nav-links{display:none}
+  .mob-overlay{display:flex;position:fixed;inset:0;z-index:1001;background:var(--dark);flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .4s}
+  .mob-overlay.open{opacity:1;pointer-events:all}
+  .mob-overlay a{font-size:1.1rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .3s;text-decoration:none}
+  .mob-overlay a:hover{color:#fff}
 }
 
 /* ==============================================
@@ -596,15 +600,24 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 <!-- FLOATING MOBILE CTA -->
 <a href="#booking" class="float-cta" id="floatCta" onclick="gtag('event','cta_click',{event_category:'engagement',event_label:'floating_cta',value:1})">Book Your Experience</a>
 
+<!-- MOBILE MENU OVERLAY (outside nav to avoid stacking context issues) -->
+<div class="mob-overlay" id="mobOverlay">
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#menu" onclick="closeMenu()">Menu</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#booking" onclick="closeMenu();gtag('event','cta_click',{event_category:'engagement',event_label:'nav_book_cta',value:1})">Book</a>
+</div>
+
 <!-- NAV -->
 <nav class="nav" id="nav">
   <a href="#" class="nav-brand">ChefLondrel</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-    <li><a href="#menu" onclick="closeMenu()">Menu</a></li>
-    <li><a href="#about" onclick="closeMenu()">About</a></li>
-    <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
-    <li><a href="#booking" onclick="closeMenu();gtag('event','cta_click',{event_category:'engagement',event_label:'nav_book_cta',value:1})" class="nav-cta">Book</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#booking" onclick="gtag('event','cta_click',{event_category:'engagement',event_label:'nav_book_cta',value:1})" class="nav-cta">Book</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
@@ -1008,11 +1021,11 @@ window.addEventListener('scroll', () => {
 /* ======= MOBILE MENU ======= */
 function toggleMenu() {
   document.getElementById('hamburger').classList.toggle('active');
-  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('mobOverlay').classList.toggle('open');
 }
 function closeMenu() {
   document.getElementById('hamburger').classList.remove('active');
-  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('mobOverlay').classList.remove('open');
 }
 
 /* ======= SCROLL REVEAL (line reveals + fade ups + image reveals) ======= */
