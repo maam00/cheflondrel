@@ -483,14 +483,14 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 .menu-strip-item:hover img{transform:scale(1.08)}
 
 .menu-cards{display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:clamp(3rem,5vw,4.5rem)}
-.mc{padding:clamp(2rem,3vw,3rem);border:1px solid rgba(232,226,216,.07);border-right:none;transition:background .4s}
+.mc{display:flex;flex-direction:column;padding:clamp(2rem,3vw,3rem);border:1px solid rgba(232,226,216,.07);border-right:none;transition:background .4s}
 .mc:last-child{border-right:1px solid rgba(232,226,216,.07)}
 .mc:hover{background:rgba(255,255,255,.03)}
 .mc-label{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
 .mc h3{font-size:clamp(1.5rem,2.5vw,2rem);font-style:italic;font-weight:700;margin-bottom:.15rem}
 .mc-price{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--gold);margin-bottom:1.25rem}
 .mc-price span{font-size:.85rem;font-weight:400;color:var(--text-dm)}
-.mc ul{margin-bottom:1.25rem}
+.mc ul{margin-bottom:1.25rem;flex:1}
 .mc li{padding:.55rem 0 .55rem 1.15rem;position:relative;font-size:.88rem;color:rgba(232,226,216,.65);border-bottom:1px solid rgba(232,226,216,.04);line-height:1.6}
 .mc li::before{content:'';position:absolute;left:0;top:.95rem;width:4px;height:4px;border-radius:50%;background:var(--gold)}
 .mc-min{font-size:.78rem;color:var(--text-dm);font-style:italic}
