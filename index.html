@@ -46,13 +46,13 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Google Analytics 4 — Replace G-XXXXXXXXXX with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GSBBV3ETF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', {
+    gtag('config', 'G-7GSBBV3ETF', {
       send_page_view: true,
       cookie_flags: 'SameSite=None;Secure'
     });
@@ -556,6 +556,12 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 .about-guitar img{width:90px;height:90px;object-fit:cover;border-radius:4px;flex-shrink:0}
 .about-guitar p{font-family:'Caveat',cursive;font-size:1.3rem;font-weight:500;color:var(--text);margin:0;line-height:1.4}
 
+.cred-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 .5rem}
+.cred-badge{padding:.3rem .8rem;border:1px solid rgba(232,226,216,.15);border-radius:20px;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-m);white-space:nowrap}
+.cred-badge:hover{border-color:var(--gold);color:var(--text)}
+.cred-sub{font-size:.65rem;text-transform:none;letter-spacing:0;opacity:.7}
+.cred-loc{border-color:rgba(196,154,92,.25);color:var(--gold)}
+
 @media(max-width:768px){
   .about-grid{grid-template-columns:1fr}
   .about-inset{position:relative;bottom:auto;right:auto;width:50%;margin:-1.5rem auto 0;border-color:var(--cream)}
@@ -627,6 +633,19 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 .footer-col a{display:block;font-size:.88rem;color:rgba(232,226,216,.5);margin-bottom:.4rem;transition:color .3s}
 .footer-col a:hover{color:#fff}
 .footer-btm{max-width:1200px;margin:3rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(232,226,216,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.75rem;color:rgba(232,226,216,.2)}
+.ig-s{background:var(--cream-alt);padding:clamp(3rem,6vw,5rem) 0}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-top:clamp(1.5rem,3vw,2.5rem)}
+.ig-item{aspect-ratio:1;overflow:hidden;border-radius:4px;position:relative}
+.ig-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s,filter .3s}
+.ig-item:hover img{transform:scale(1.05);filter:brightness(1.1)}
+.ig-item::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.15);opacity:0;transition:opacity .3s}
+.ig-item:hover::after{opacity:1}
+.ig-cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;padding:.7rem 2rem;border:1px solid var(--dark);color:var(--dark);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:all .3s;border-radius:2px}
+.ig-cta:hover{background:var(--dark);color:var(--cream)}
+.ig-cta svg{transition:transform .3s}
+.ig-cta:hover svg{transform:translateX(3px)}
+@media(max-width:600px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+
 .footer-bbadge{padding:.35rem 1rem;border:1px solid rgba(232,226,216,.1);font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,226,216,.4)}
 </style>
 </head>
@@ -665,7 +684,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 <!-- HERO -->
 <header class="hero" id="hero" role="banner">
   <div class="hero-img-accent">
-    <img src="images/margherita-closeup.jpg" alt="Fresh margherita pizza with bubbly crust and basil by Chef Londrel" width="220" height="293">
+    <img src="images/hero-rooftop.jpg" alt="Rooftop pizza party with guests enjoying wood-fired pizza by Chef Londrel" width="220" height="293">
   </div>
 
   <div class="hero-title">
@@ -818,14 +837,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
           <p>Locations 45+ minutes drive</p>
         </div>
       </div>
-      <div class="ao">
-        <img src="images/hero-berkshires.jpg" alt="Holiday party" loading="lazy">
-        <div>
-          <h4>Holiday Surcharge</h4>
-          <div class="ao-price">+25% of total</div>
-          <p>Memorial Day, July 4th &amp; Labor Day weekends</p>
-        </div>
-      </div>
       <div class="ao ao-feat">
         <img src="images/lonny-guitar-outdoor.jpg" alt="Guitar singalong" loading="lazy">
         <div>
@@ -838,7 +849,8 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 
     <div class="menu-fine fu">
       Custom menus for larger events and weddings — reach out to discuss.<br>
-      Works with your oven, outdoor grill, or his portable Ooni.
+      Works with your oven, outdoor grill, or his portable Ooni.<br>
+      A 25% surcharge applies for holiday weekends (Memorial Day, July 4th, Labor Day).
     </div>
   </div>
 </section>
@@ -919,6 +931,17 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
 
         <p class="fu fd4" style="font-weight:500;color:var(--text)">Through all of the pizza making, expect unparalleled charm, wit, and pure class entertainment. No shortage of laughing and eating at these events.</p>
 
+        <div class="cred-badges fu fd4">
+          <span class="cred-badge">Pizza School NYC</span>
+          <span class="cred-badge">Upside Pizza</span>
+          <span class="cred-badge">Ci Siamo <span class="cred-sub">(Danny Meyer)</span></span>
+          <span class="cred-badge">Hilltown Hot Pies</span>
+          <span class="cred-badge">ScottsPizzaTours</span>
+          <span class="cred-badge cred-loc">Campania</span>
+          <span class="cred-badge cred-loc">Tokyo</span>
+          <span class="cred-badge cred-loc">Oaxaca</span>
+        </div>
+
         <div class="about-guitar fu fd4">
           <img src="images/lonny-guitar-sitting.jpg" alt="Lonny with guitar" loading="lazy">
           <p>&ldquo;The pizza is just the beginning. When the guitar comes out after dinner, that's when the night gets magical.&rdquo;</p>
@@ -963,6 +986,28 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-he
   <button class="lb-x" aria-label="Close">&times;</button>
   <img id="lbImg" src="" alt="">
 </div>
+
+<!-- INSTAGRAM -->
+<section class="section ig-s" aria-label="Instagram">
+  <div class="section-inner" style="text-align:center">
+    <span class="section-label fu">Instagram</span>
+    <h2 class="fu fd1" style="font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-.02em">Follow the Pizza</h2>
+    <div class="ig-grid">
+      <a class="ig-item fu fd1" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/lonny-rooftop-pizza.jpg" alt="Lonny making pizza on rooftop" loading="lazy"></a>
+      <a class="ig-item fu fd2" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/pizza-colorful.jpg" alt="Colorful artisan pizza" loading="lazy"></a>
+      <a class="ig-item fu fd1" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/party-group.jpg" alt="Guests enjoying pizza party" loading="lazy"></a>
+      <a class="ig-item fu fd2" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/pizza-oven-flames.jpg" alt="Pizza oven with flames" loading="lazy"></a>
+      <a class="ig-item fu fd3" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/charcuterie.jpg" alt="Charcuterie spread" loading="lazy"></a>
+      <a class="ig-item fu fd2" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/lonny-cooking-cheese.jpg" alt="Lonny cooking with cheese" loading="lazy"></a>
+      <a class="ig-item fu fd3" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/group-pizza-pose.jpg" alt="Group posing with pizza" loading="lazy"></a>
+      <a class="ig-item fu fd4" href="https://instagram.com/londreleats" target="_blank" rel="noopener"><img src="images/cannoli-desserts.jpg" alt="Cannoli desserts" loading="lazy"></a>
+    </div>
+    <a class="ig-cta fu fd4" href="https://instagram.com/londreleats" target="_blank" rel="noopener" onclick="gtag('event','contact',{event_category:'engagement',event_label:'instagram_grid_cta',method:'instagram'})">
+      Follow @londreleats
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
 
 <!-- BOOKING -->
 <section class="section book-s" id="booking" aria-label="Book a Pizza Party">
