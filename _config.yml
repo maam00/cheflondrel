@@ -1,0 +1,11 @@
+url: "https://cheflon.com"
+baseurl: ""
+title: "ChefLon"
+description: "Private pizza experiences — Berkshires, NYC, Hamptons & beyond"
+author: "ChefLon"
+
+# Exclude non-site files from Jekyll build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
